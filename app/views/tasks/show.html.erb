@@ -1,15 +1,18 @@
 <div class="home">
-  <h1><%= @task.title %></h1>
+  <h1>Task: <%= @task.title %></h1>
 
-  <button class="button"><%= link_to "Update this task", edit_path %></button>
-  <button class="button"><%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></button>
+  <h2>Description: <%= @task.details %></h2>
 
-  <p><%= @task.details %></p>
+   <div class="symbol">
+     <%if @task.completed == true %>
+        ✔ Task is completed
+      <%else%>
+        😢 Task is not complete  
+      <% end %>
+    </div>
 
-    <div class="checker">
-      <input type="checkbox" name="" <%=@checker%>/>
-      <label><%=@sentence%></label>
-    <div>
+  <%= link_to "Return to main", tasks_path %><br><br>
 
-  <%= link_to "Return to main", tasks_path %>
+  <button class="button"><%= link_to "Update this task", edit_path, class: "button-link" %></button>
+  <button class="button"><%= link_to "Delete", task_path(@task), class: "button-link", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></button>
 </div>

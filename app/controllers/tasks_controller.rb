@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -6,17 +7,10 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
-    if @task.completed == true;
-      @checker = "checked"
-      @sentence = "Task is completed"
-    else
-      @checker = ""
-      @sentence = "Task is not complete"
-    end
   end
 
   def new
-    @task =Task.new
+    @task = Task.new
   end
 
   def create
@@ -40,7 +34,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    
+
     redirect_to tasks_path
   end
 

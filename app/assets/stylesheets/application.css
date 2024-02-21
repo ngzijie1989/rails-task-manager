@@ -21,6 +21,7 @@
 
  .main-top{
   border-bottom: 1px solid grey;
+  padding-bottom: 20px;
  }
 
  body{
@@ -32,18 +33,37 @@
 
  .main-bottom{
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .button-link{
+  background-color: rgb(245, 238, 238);
+  padding: 10px;
+  display: flex;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
  }
 
  .link{
-  background-color: rgb(245, 238, 238);
-  padding: 20px;
-  width: 20
-  display: flex;
+  text-decoration: none;
+  color: black;
+ }
+
+ .link:hover{
+  text-decoration: none;
+  color: red;
  }
 
  .home{
   border: 1px solid black;
-  padding: 50px;
-  width: 60%;
+  padding: 20px;
+  width: 50%;
   text-align: center;
+ }
+
+ .symbol{
+  padding-right: 10px;
  }
