@@ -1,0 +1,12 @@
+<div class="home">
+
+  <h1>Edit a task</h1>
+
+  <%= form_with model: @task do |f| %>
+    <p><%= f.label :title %> <%= f.text_field :title %> </p>
+    <p><%= f.label :details %> <%= f.text_field :details %> </p>
+    <p><%= f.check_box :completed %> <%= f.label :completed, "Tick if task completed" %> </p>
+    <%= f.submit class:"btn btn-primary" %>
+  <% end %>
+
+</div>

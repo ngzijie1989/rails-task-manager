@@ -1,0 +1,15 @@
+<div class="home">
+  <h1><%= @task.title %></h1>
+
+  <button class="button"><%= link_to "Update this task", edit_path %></button>
+  <button class="button"><%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></button>
+
+  <p><%= @task.details %></p>
+
+    <div class="checker">
+      <input type="checkbox" name="" <%=@checker%>/>
+      <label><%=@sentence%></label>
+    <div>
+
+  <%= link_to "Return to main", tasks_path %>
+</div>

@@ -1,0 +1,24 @@
+<div class="home">
+  <h1>My tasks</h1>
+
+    <div class="main-top">
+      <% @tasks.each do |task| %>
+          <div class="d-flex justify-content-center">
+            <div>
+              <%if task.completed == true %>
+                ✔
+              <%else%>
+                😢
+              <% end %>
+            </div>
+            <div>
+              <%= link_to task.title, task_path(task.id) %>
+            </div>
+          </div>
+      <%end%>
+    </div>
+
+    <div class="main-bottom">
+      <button class="link"><%= link_to "Add a new task", tasks_new_path %></button>
+    </div>
+</div>
